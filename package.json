@@ -1,6 +1,6 @@
 {
   "name": "metrowave",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A modern desktop music streaming application.",
   "main": "main.js",
   "scripts": {
