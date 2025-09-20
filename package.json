@@ -1,0 +1,56 @@
+{
+  "name": "metrowave",
+  "version": "1.0.0",
+  "description": "A modern desktop music streaming application.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "author": "Ashmil Kurikkal",
+  "license": "MIT",
+  "dependencies": {
+    "electron-squirrel-startup": "latest",
+    "ytmusic-api": "latest"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.metrowave.app",
+    "productName": "MetroWave",
+    "files": [
+      "**/*",
+      "!*.ts",
+      "!*.map",
+      "!*.md",
+      "!*.vscode",
+      "!dist",
+      "!release"
+    ],
+    "extraResources": [
+      {
+        "from": "bin",
+        "to": "bin",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "build/icon.icns",
+      "category": "public.app-category.music"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "build/icon.png",
+      "category": "AudioVideo;Audio;"
+    }
+  }
+}

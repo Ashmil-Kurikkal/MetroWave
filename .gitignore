@@ -1,0 +1,27 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Build and Distribution Artifacts
+dist/
+release/
+*.asar
+*.asar.unpacked
+
+# IDE and Editor Directories
+.vscode/
+.idea/
+
+# Other Temporary Files
+*.cache
+*.log
+
+# Personal Files (if any)
+.env
