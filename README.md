@@ -1,5 +1,5 @@
 # MetroWave 🌊
-
+![MetroWave Screenshot](https://github.com/Ashmil-Kurikkal/MetroWave/blob/main/build/iconpng.png)
 ![MetroWave Screenshot](https://github.com/Ashmil-Kurikkal/MetroWave/blob/main/Screenshots/Screenshot%202025-09-20%20192133.png)
 ![MetroWave Screenshot](https://github.com/Ashmil-Kurikkal/MetroWave/blob/main/Screenshots/Screenshot%202025-09-20%20192250.png)
 A modern, sleek desktop music streaming application powered by YouTube Music. Built with Electron, MetroWave offers a beautiful, native-like experience for listening to your favorite music without a browser.
