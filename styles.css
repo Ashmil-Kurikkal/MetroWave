@@ -159,8 +159,26 @@ img {
   background: linear-gradient(135deg, var(--color-background-gradient-start) 0%, var(--color-background-gradient-mid) 50%, var(--color-background-gradient-end) 100%);
   transition: background 0.5s ease;
 }
-.sidebar, .content, .right-pane, #player-bar, .top-bar {
+.sidebar, .content, .right-pane, .top-bar {
   transition: background-color 0.4s ease, border-color 0.4s ease, backdrop-filter 0.4s ease;
+}
+#player-bar {
+  height: 90px;
+  background: var(--color-background-player);
+  backdrop-filter: blur(var(--glass-blur)); -webkit-backdrop-filter: blur(var(--glass-blur));
+  border-top: 1px solid var(--color-border-secondary); display: flex;
+  align-items: center; justify-content: space-between;
+  padding: 0 24px; z-index: 100;
+  position: relative;
+}
+.player-bar-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .sidebar {
   width: 240px; padding: 24px 20px; display: flex; flex-direction: column;
@@ -177,7 +195,7 @@ img {
 }
 .top-bar {
   padding: 8px 24px; display: flex; align-items: center; gap: 16px;
-  background: rgba(15, 15, 15, 0.6);
+  background: transparent;
   border-bottom: 1px solid var(--color-border-primary);
 }
 .right-pane {
@@ -199,7 +217,7 @@ img {
 
 /* Custom Title Bar */
 .titlebar {
-  background: var(--color-background-gradient-mid);
+  background: transparent;
   height: 40px;
   display: flex;
   justify-content: flex-end;
@@ -567,16 +585,24 @@ body.animations-enabled #volume::-webkit-slider-thumb:hover { transform: scale(1
 .main-view::-webkit-scrollbar-thumb, .right-pane-content::-webkit-scrollbar-thumb, .context-menu .submenu::-webkit-scrollbar-thumb { background-color: var(--color-border-secondary); border-radius: 4px; }
 .progress-loading-overlay {
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
     width: 100%;
-    height: 4px; /* Match progress bar height */
-    transform: translateY(-50%);
-    background: linear-gradient(90deg, transparent, var(--color-primary-accent-glow), transparent);
-    background-size: 200% 100%;
-    border-radius: 2px;
-    animation: loading-shimmer 1.5s ease-in-out infinite;
-    pointer-events: none; /* Allow clicks to pass through */
+    height: 100%; /* Fill the entire player bar */
+    /* A wider, softer gradient for a sleek look */
+    background: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--color-primary-accent-glow-faint) 40%,
+        var(--color-primary-accent-glow-faint) 60%,
+        transparent 100%
+    );
+    background-size: 400px 100%;
+    animation: loading-shimmer 2s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.7;
+    mix-blend-mode: screen;
 }
 button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--color-primary-accent); outline-offset: 2px; }
 .initially-hidden { display: none !important; }
