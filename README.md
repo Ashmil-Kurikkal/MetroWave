@@ -33,7 +33,8 @@ Getting started with MetroWave is easy.
 #### **For Users**
 
 1.  Download the installer here : [**MetroWave.Setup.1.0.0.exe**](https://github.com/Ashmil-Kurikkal/MetroWave/releases/download/v1.0.0-alpha/MetroWave.Setup.1.0.0.exe)
-2.  Run the installer and open the app, I guess that'll do!
+2.  And obviously just ignore the Windows defender waarning. 😏
+3.  Run the installer and open the app, I guess that'll do!
 
 #### **For Developers**
 
