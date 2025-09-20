@@ -13,11 +13,10 @@ const YTMusic = require('ytmusic-api');
 // --- INITIALIZATION ---
 const ytmusic = new YTMusic();
 let currentYtdlpVideoProcess = null;
-const isDev = process.env.NODE_ENV !== 'production';
-const ytDlpPath = isDev 
-    ? 'yt-dlp' 
-    : path.join(process.resourcesPath, 'bin', process.platform === 'win32' ? 'yt-dlp.exe' : 'yt-dlp');
-
+const ytDlpBinary = process.platform === 'win32' ? 'yt-dlp.exe' : 'yt-dlp';
+const ytDlpPath = app.isPackaged
+    ? path.join(process.resourcesPath, 'bin', ytDlpBinary) // Production path
+    : path.join(__dirname, 'bin', ytDlpBinary);             // Development path
 // =========================================================================
 // --- DATA FORMATTING HELPERS ---
 // =========================================================================
