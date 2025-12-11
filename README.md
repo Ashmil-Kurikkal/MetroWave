@@ -1,4 +1,4 @@
-# MetroWave 🌊
+# MetroWave 🌊 (DROPPED SUPPORT MAY NOT WORK, I'm working on an overhaul)
 ![MetroWave Screenshot](https://github.com/Ashmil-Kurikkal/MetroWave/blob/main/build/iconpng.png)
 ![MetroWave Screenshot](https://github.com/Ashmil-Kurikkal/MetroWave/blob/main/Screenshots/Screenshot%202025-09-20%20192133.png)
 ![MetroWave Screenshot](https://github.com/Ashmil-Kurikkal/MetroWave/blob/main/Screenshots/Screenshot%202025-09-20%20192250.png)
